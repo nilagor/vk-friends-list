@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>VK Friends List</title>
+    <script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
+    <link href="dist/style/bundle.css" rel="stylesheet">
+</head>
+
+<body>
+<script type="text/javascript">
+    VK.init({
+        apiId: 5020673
+    });
+</script>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">VK Friends List</a>
+        </div>
+        <a class="navbar-text navbar-right" href="https://github.com/nilagor" target="_blank">Nilagor</a>
+    </div>
+</nav>
+<div class="container">
+    <vk-friends-list>Loading...</vk-friends-list>
+</div>
+</body>
+
+<script src="dist/vendor.bundle.js"></script>
+<script src="dist/app.bundle.js"></script>
+</html>

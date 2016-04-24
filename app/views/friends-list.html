@@ -1,0 +1,34 @@
+<div class="page-header">
+    <h1>Friends:</h1>
+</div>
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default"
+                    (click)="changeOrder('first_name')"
+                    [ngClass]="{active: activeSort == 'first_name'}"
+                    >
+                Имя
+                <i class="glyphicon glyphicon-chevron-up" *ngIf="sortBy.first_name.asc"></i>
+                <i class="glyphicon glyphicon-chevron-down" *ngIf="!sortBy.first_name.asc"></i>
+            </button>
+            <button type="button" class="btn btn-default"
+                    (click)="changeOrder('last_name')"
+                    [ngClass]="{active: activeSort == 'last_name'}"
+                    >
+                Фамилия
+                <i class="glyphicon glyphicon-chevron-up" *ngIf="sortBy.last_name.asc"></i>
+                <i class="glyphicon glyphicon-chevron-down" *ngIf="!sortBy.last_name.asc"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="panel-body">
+        <ul class="list-group">
+            <li *ngFor="#friend of friends" class="list-group-item">
+                {{friend.first_name}} {{friend.last_name}}
+            </li>
+        </ul>
+    </div>
+</div>
